@@ -22,3 +22,27 @@ for (let index = 0; index < word.length; index += 1) {
 }
 
 console.log(reverseWord);
+
+    //Exercício 3
+// Considere o array de strings abaixo:
+// let array = ['java', 'javascript', 'python', 'html', 'css'];
+// Utilize a estrutura de repetição for para escrever dois algoritmos: um que imprima no console a maior palavra desse array e outro que imprima a menor. Considere o número de caracteres de cada palavra.
+
+let array = ["java", "javascript", "python", "html", "css"];
+let longestWord = array[0];
+let shortestWord = array[0];
+
+for (let indexLongest = 0; indexLongest < array.length; indexLongest += 1) {
+    if (array[indexLongest].length > longestWord.length) {
+        longestWord = array[indexLongest];
+    }
+}
+
+for (let indexShortest = 0; indexShortest < array.length; indexShortest += 1) {
+    if (array[indexShortest].length < shortestWord.length) {
+        shortestWord = array[indexShortest];
+    }
+}
+
+console.log("A maior palavra é " + longestWord);
+console.log("A menor palavra é " + shortestWord);
